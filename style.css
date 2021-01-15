@@ -16,8 +16,6 @@ body{
     background-color: #aaaaaa;
 }
 
-/*Tall row under the main card./*
-
-.row-tall{
-    height: 115px;
+.instructions{
+    text-align: left;
 }
