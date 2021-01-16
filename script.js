@@ -31,25 +31,10 @@ function startTimer() {
             alert("I am sorry, but you have run out of time. Better luck next time!");
         }
     }, 1000);
-    document.getElementById("quiz-question").innerHTML = "What is HTML?"; 
+    document.getElementById("quiz-question").innerHTML = question1; 
     document.getElementById("quiz-question").innerHTML = ""; 
-    document.getElementById("quiz-question").innerHTML = "What is HTML?"; 
+    document.getElementById("quiz-question").innerHTML = ""; 
 
 };
 
-// Question 1:
 
-// var quizQuestion1 = document.getElementsByClassName("card-title mb-3")
-
-// function displayQuestion1() {
-//     document.getElementsByClassName("card-title mb-3").innerHTML = question1; 
-// }
-
-
-// document.getElementById("start").addEventListener("click", startTimer);
-
-
-
-// document.getElementById("start").addEventListener("click", displayQuestion1);
-
-// document.getElementById("demo").innerHTML = "Paragraph changed!";
