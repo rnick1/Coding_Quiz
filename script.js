@@ -1,6 +1,5 @@
 // Welcome/instructions card.
 var greeting = "Welcome to the Week 4 Coding Quiz!";
-var 
 
 // These are the question variables.
 var question1 = "What is HTML?";
@@ -35,7 +34,10 @@ var answer5B = "";
 var answer5C = "";
 var answer5D = "";
 
-var timeLimit = document.getElementById(".time");
+// Timer:
+
+
+var timeLimit = document.getElementById("time");
 
 var secondsLeft = 75;
 
