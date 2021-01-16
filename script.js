@@ -35,8 +35,20 @@ var answer5B = "";
 var answer5C = "";
 var answer5D = "";
 
+var timeLimit = document.getElementById(".time");
 
-window.onload.function myFunction() {
-  alert("Page is loaded");
-}
-myFunction();
+var secondsLeft = 75;
+
+function startTimer() {
+    timerInterval = setInterval(function() {
+        secondsLeft--;
+        timeLimit.textContent = secondsLeft + " seconds remaining.";
+
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+            alert("I am sorry, but you have run out of time. Better luck next time!");
+        }
+    }, 1000);
+};
+
+startTimer();

@@ -10,7 +10,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+
 
 </head>
 
@@ -19,7 +19,10 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand">Week 4 Coding Quiz</a>
 
-            <!-- This is where the "Time remaining" feature will go. -->
+        <h4>Time remaining: <span id="time">75</span></h4>
+
+
+        <!-- This is where the "Time remaining" feature will go. -->
 
         </div>
     </nav>
@@ -30,27 +33,31 @@
         <div class="row-A"></div>
         <br>
         <div class="row-A">
-          <div class="col-xs-1 col-md-1 col-lg-1"></div>
-          <!--This column has all the content-->
-          <div class="col-xs-10 col-md-7 col-lg-6">
-              
-            <div class="card-contact">
-              <div class="row no-gutters">
-                <section class="card-body text-center">
-                  <h3 class="card-title mb-3">Welcome to the Week 4 Coding Quiz!</h3>
-                  <p class="instructions">Instructions: This quiz is designed to test your coding knowledge this far in the course at a very macro level.
-                      This quiz contains five multiple-choice questions, which you will be given 75 seconds to complete. At the end of the quiz you will 
-                      be given the option of recording your score. Click the button below when you are ready to begin! Good luck and have fun!</p>
-                      <button type="button" class="btn btn-secondary btn-lg btn-block">Start the Quiz</button>                </section>
-              </div>
+            <div class="col-xs-1 col-md-1 col-lg-1"></div>
+            <!--This column has all the content-->
+            <div class="col-xs-10 col-md-7 col-lg-6">
+
+                <div class="card-contact">
+                    <div class="row no-gutters">
+                        <section class="card-body text-center">
+                            <h3 class="card-title mb-3">Welcome to the Week 4 Coding Quiz!</h3>
+                            <p class="instructions">Instructions: This quiz is designed to test your coding knowledge
+                                this far in the course at a very macro level.
+                                This quiz contains five multiple-choice questions, which you will be given 75 seconds to
+                                complete. At the end of the quiz you will
+                                be given the option of recording your score. Click the button below when you are ready
+                                to begin! Good luck and have fun!</p>
+                            <button id = "start" type="button" class="btn btn-secondary btn-lg btn-block">Start the Quiz</button>
+                        </section>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-xs-1 col-md-4 col-lg-5"></div>
+            <div class="col-xs-1 col-md-4 col-lg-5"></div>
         </div>
         <div class="row-tall"></div>
-      </main>
+    </main>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
