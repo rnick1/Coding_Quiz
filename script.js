@@ -36,7 +36,6 @@ var answer5D = "";
 
 // Timer:
 
-
 var timeLimit = document.getElementById("time");
 
 var secondsLeft = 75;
@@ -53,4 +52,4 @@ function startTimer() {
     }, 1000);
 };
 
-startTimer();
+document.getElementById("start").addEventListener("click", startTimer);
