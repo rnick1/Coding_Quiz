@@ -23,3 +23,8 @@ body{
 .navbar-text{
     float: right;
 }
+
+#time{
+    font-size: x-small;
+    color: red;
+}
