@@ -9,30 +9,11 @@ var question4 = "What are Web API's?";
 var question5 = "What are Third-Party API's?";
 
 // These are the answer variables...solution a for question 1, solution b for question 1, etc.
-var answer1A = "";
-var answer1B = "";
-var answer1C = "";
-var answer1D = "";
-
-var answer2A = "";
-var answer2B = "";
-var answer2C = "";
-var answer2D = "";
-
-var answer3A = "";
-var answer3B = "";
-var answer3C = "";
-var answer3D = "";
-
-var answer4A = "";
-var answer4B = "";
-var answer4C = "";
-var answer4D = "";
-
-var answer5A = "";
-var answer5B = "";
-var answer5C = "";
-var answer5D = "";
+var answerA = "";
+var answerB = "";
+var answerC = "";
+var answerD = "";
+var answerE = "";
 
 // Timer:
 
