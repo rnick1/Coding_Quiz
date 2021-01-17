@@ -28,3 +28,7 @@ body{
     font-size: x-small;
     color: red;
 }
+
+#quiz-options{
+    background-color: grey;
+}
