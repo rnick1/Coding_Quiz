@@ -1,10 +1,8 @@
 var multiChoice = document.getElementById("quiz-options");
 multiChoice.setAttribute("style", "display:hide");
 
-// Variables:
 var directions = document.querySelectorAll("h3");
 var content = document.getElementById("intro-content");
-// var options = document.querySelectorAll("ul");
 var button = document.querySelectorAll("button");
 
 // Timer:
