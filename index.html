@@ -29,7 +29,7 @@
     </nav>
 
 <!-- The start menu -->
-    <div class="card container col-5" style="text-align: center;">
+    <div class="card container col-5 intro" style="text-align: center;">
         <div class="card-header">Welcome to the Week 4 Coding Quiz!</div>
         <div class="card-body">
             <h5 class="card-title">Instructions</h5>
@@ -37,13 +37,13 @@
                 quiz contains five multiple-choice questions, which you will be given 75 seconds to complete. At the end of the quiz 
                 you will be given the option of recording your score. Click "Next" when you are ready to begin! Good luck and have fun!
             </p>
-            <a href="#" class="btn btn-primary next">Next</a>
+            <a href="#" class="btn btn-primary" id="introSubmit">Next</a>
         </div>
     </div>
 
-    <div class="card container col-5" style="text-align: center;">
+    <div class="card container col-5 q1" style="text-align: center;">
         <div class="card-body">
-            <h5 class="card-title">Question 1: What contains the structure of a webpage?</h5>
+            <h5 class="card-title">Question 1: What determines the structure of a webpage?</h5>
             <ul>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1True">A: HTML</button>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1False1">B: CSS</button>
@@ -51,14 +51,14 @@
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1False3">D. Web API's</button>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1False4">E. jQuery</button>
             </ul>
-            <h5>Result: </h5>
-            <a href="#" class="btn btn-primary ">Next</a>
+            <h5 class="displayResult1">Result: </h5>
+            <a href="#" class="btn btn-primary" id="q1Submit">Next</a>
         </div>
     </div>
 
-    <div class="card container col-5" style="text-align: center;">
+    <div class="card container col-5 q2" style="text-align: center;">
         <div class="card-body">
-            <h5 class="card-title">Question 2: What contains the styling of a webpage?</h5>
+            <h5 class="card-title">Question 2: What determines the styling of a webpage?</h5>
             <ul>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2False1">A: HTML</button>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2True">B: CSS</button>
@@ -66,12 +66,12 @@
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2False3">D. Web API's</button>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2False4">E. jQuery</button>
             </ul>
-            <h5>Result: </h5>
-            <a href="#" class="btn btn-primary ">Next</a>
+            <h5 class="displayResult2">Result: </h5>
+            <a href="#" class="btn btn-primary" id="q2Submit">Next</a>
         </div>
     </div>
 
-    <div class="card container col-5" style="text-align: center;">
+    <div class="card container col-5 q3" style="text-align: center;">
         <div class="card-body">
             <h5 class="card-title">Question 3: What controls the functionality of a webpage?</h5>
             <ul>
@@ -81,12 +81,12 @@
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q3False3">D. Web API's</button>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q3False4">E. jQuery</button>
             </ul>
-            <h5>Result: </h5>
-            <a href="#" class="btn btn-primary ">Next</a>
+            <h5 class="displayResult3">Result: </h5>
+            <a href="#" class="btn btn-primary" id="q3Submit">Next</a>
         </div>
     </div>
 
-    <div class="card container col-5" style="text-align: center;">
+    <div class="card container col-5 q4" style="text-align: center;">
         <div class="card-body">
             <h5 class="card-title">Question 4: What interacts with the browser to enable user actions to change elements of a webpage?</h5>
             <ul>
@@ -96,12 +96,12 @@
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q4True">D. Web API's</button>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q4False4">E. jQuery</button>
             </ul>
-            <h5>Result: </h5>
-            <a href="#" class="btn btn-primary ">Next</a>
+            <h5 class="displayResult4">Result: </h5>
+            <a href="#" class="btn btn-primary" id="q4Submit">Next</a>
         </div>
     </div>
 
-    <div class="card container col-5" style="text-align: center;">
+    <div class="card container col-5 q5" style="text-align: center;">
         <div class="card-body">
             <h5 class="card-title">Question 5: What simplifies the usage of JavaScript?</h5>
             <ul>
@@ -111,26 +111,26 @@
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q5False4">D. Web API's</button>
                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="q5True">E. jQuery</button>
             </ul>
-            <h5>Result: </h5>
-            <a href="#" class="btn btn-primary ">Next</a>
+            <h5 class="displayResult5">Result: </h5>
+            <a href="#" class="btn btn-primary" id="q5Submit">Next</a>
         </div>
     </div>
     <!-- Add span class for the score -->
     <div class="card container col-5" style="text-align: center;">
         <h3 class="card-header">You have completed the quiz!</h3>
         <div class="card-body">
-            <h5 class="card-title">Your score is:</h5><span></span>
+            <h5 class="card-title">Your score is:</h5><span id="finalScore"></span>
             <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputEmail4">Initials</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <label for="inputinitials4" id="userInitials">Initials</label>
+                    <input type="initials" class="form-control" id="inputinitials">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputPassword4">Score</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label for="inputScore4" id="userScore">Score</label>
+                    <input type="score" class="form-control" id="inputScore">
                   </div>
-                <button type="submit" class="btn btn-primary">Save Score</button>
+                <button type="submit" class="btn btn-primary" id="saveFinalResults">Save Score</button>
               </form>
 
         </div>
