@@ -15,11 +15,6 @@ var answerC = "";
 var answerD = "";
 var answerE = "";
 
-var answers = [
-    a: answerA,
-    b: answerB,
-    c:
-]
 
 var mainField = document.querySelector("h3");
 var contentField = document.querySelector("p");
@@ -44,11 +39,7 @@ function startTimer() {
     }, 1000);
 
     document.getElementById("quiz-question").innerHTML = "What is HTML?";
-    document.getElementById("quiz-options").innerHTML =     <p>
-    <button type="button" class="btn btn-secondary btn-lg btn-block">Option A</button>
-    <button type="button" class="btn btn-secondary btn-lg btn-block">Option B</button>
-    <button type="button" class="btn btn-secondary btn-lg btn-block">Option C</button>
-    <button type="button" class="btn btn-secondary btn-lg btn-block">Option D</button></p>;
+    document.getElementById("quiz-options").innerHTML = "What is HTML?";
     document.getElementById("start").innerHTML = "Submit Answer";
 
 };
