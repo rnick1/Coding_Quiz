@@ -15,6 +15,17 @@ var answerC = "";
 var answerD = "";
 var answerE = "";
 
+var answers = [
+    a: answerA,
+    b: answerB,
+    c:
+]
+
+var mainField = document.querySelector("h3");
+var contentField = document.querySelector("p");
+var buttonField = document.querySelector("button");
+
+
 // Timer:
 
 var timeLimit = document.getElementById("time");
@@ -31,10 +42,22 @@ function startTimer() {
             alert("I am sorry, but you have run out of time. Better luck next time!");
         }
     }, 1000);
-    document.getElementById("quiz-question").innerHTML = question1; 
-    document.getElementById("quiz-question").innerHTML = ""; 
-    document.getElementById("quiz-question").innerHTML = ""; 
+
+    document.getElementById("quiz-question").innerHTML = "What is HTML?";
+    document.getElementById("quiz-options").innerHTML =     <p>
+    <button type="button" class="btn btn-secondary btn-lg btn-block">Option A</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block">Option B</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block">Option C</button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block">Option D</button></p>;
+    document.getElementById("start").innerHTML = "Submit Answer";
 
 };
 
+function changeText() {
+}
 
+
+
+// mainField.setAttribute("style", "display: none");
+// contentField.setAttribute("style", "display: none");
+// buttonField.setAttribute("style", "display: none");
