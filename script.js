@@ -1,15 +1,27 @@
 var timeLeft = document.querySelector("#time-left");
-var startQuizButton = document.querySelector("#start-quiz-button");
+var introCard = document.querySelector("#intro-card");
+var startQuizButton = document.getElementById("start-quiz-button").addEventListener("click", startTimer);
 var questionCard = document.querySelector("#question-card");
 var quizQuestion = document.querySelector("#quiz-question");
 var quizOptions = document.querySelector("#quiz-options");
 var result = document.querySelector("#result");
 var nextQuestion = document.querySelector("#next");
 
+// For timer:
+var secondsLeft = 75;
 
+function startTimer() {
+    timerInterval = setInterval(function() {
+        secondsLeft--;
+        timeLeft.textContent = secondsLeft + " seconds remaining";
 
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+            alert("I am sorry, but you have run out of time. Better luck next time!");
+        }
+    }, 1000);
 
-
+};
 
 
 

@@ -15,17 +15,13 @@ body{
     text-align: left;
 }
 
-#time{
+#time-left{
     font-size: x-small;
     color: red;
 }
 
 #quiz-options{
     background-color: grey;
-}
-
-#intro-card{
-    display: none;
 }
 
 #question-card{
