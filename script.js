@@ -31,10 +31,11 @@ var question1 = {
     optionB: "CSS",
     optionC: "JavaScript",
     optionD: "Web API's",
+    questionResult:" ",
 };
 
 var question2 = {
-    question: "What do web developers use to structure a web page?",
+    question: "What do web developers use to set the style of a web page?",
     optionA: "HTML",
     optionB: "CSS",
     optionC: "JavaScript",
@@ -42,7 +43,7 @@ var question2 = {
 };
 
 var question3 = {
-    question: "What do web developers use to structure a web page?",
+    question: "What do web developers use to set the functionality of a web page?",
     optionA: "HTML",
     optionB: "CSS",
     optionC: "JavaScript",
@@ -50,17 +51,22 @@ var question3 = {
 };
 
 var question4 = {
-    question: "What do web developers use to structure a web page?",
+    question: "What do web developers use to manipulate a web page using the DOM structure?",
     optionA: "HTML",
     optionB: "CSS",
     optionC: "JavaScript",
     optionD: "Web API's",
 };
 
-var quizOptionA = document.querySelector("#qOptionA");
-var quizOptionB = document.querySelector("#qOptionB");
-var quizOptionC = document.querySelector("#qOptionC");
-var quizOptionD = document.querySelector("#qOptionD");
+// function addToVariable() {
+//     storeVariable = [];
+//     push.storeVariable()
+// }
+// // When user clicks on one of these options, the result will go to addToVariable(). addToVariable will push the result to storeVariable.
+// var quizOptionA = document.querySelector("#qOptionA").addEventListener("click", addToVariable);
+// var quizOptionB = document.querySelector("#qOptionB").addEventListener("click",);
+// var quizOptionC = document.querySelector("#qOptionC").addEventListener("click",);
+// var quizOptionD = document.querySelector("#qOptionD").addEventListener("click",);
 
 
 function setupQuestion1() {
@@ -70,6 +76,47 @@ function setupQuestion1() {
     quizOptionC.textContent = question1.optionC
     quizOptionD.textContent = question1.optionD
 
+    var quizOptionA = document.querySelector("#qOptionA").addEventListener("click", selectsCorrect());
+    var quizOptionB = document.querySelector("#qOptionB").addEventListener("click", selectsIncorrect);
+    var quizOptionC = document.querySelector("#qOptionC").addEventListener("click", selectsIncorrect);
+    var quizOptionD = document.querySelector("#qOptionD").addEventListener("click", selectsIncorrect);
+    
+    selectsCorrect() {
+        question1.questionResult.textContent = "Correct!";
+    };
+
+    selectsIncorrect() {
+        question1.questionResult.textContent = "Incorrect!";
+    };
+
+    // if(quizOptionA === true) {
+
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function setupQuestion2() {
+    quizQuestion.textContent = question2.question
+    quizOptionA.textContent = question2.optionA
+    quizOptionB.textContent = question2.optionB
+    quizOptionC.textContent = question2.optionC
+    quizOptionD.textContent = question2.optionD
 }
 
 
