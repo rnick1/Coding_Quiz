@@ -12,128 +12,86 @@
     <link rel="stylesheet" href="style.css" />
 
 </head>
+
 <body>
-<!-- Navbar -->
-<!-- Important! Add id for the countdown timer in the span on line 25. -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">High Score</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link">Seconds remaining:<span id="timer"></span></a>
-            </li>
-        </ul>
+        <a class="navbar-brand">Week 4 Coding Quiz</a>
+
+        <h4><span id="time"></span></h4>
+
+        </div>
     </nav>
 
-<!-- The start menu -->
-    <div class="card container col-5 intro" style="text-align: center;">
-        <div class="card-header">Welcome to the Week 4 Coding Quiz!</div>
-        <div class="card-body">
-            <h5 class="card-title">Instructions</h5>
-            <p class="card-text" style="text-align: left;">This quiz is designed to test your coding knowledge this far in the course at a very macro level.This 
-                quiz contains five multiple-choice questions, which you will be given 75 seconds to complete. At the end of the quiz 
-                you will be given the option of recording your score. Click "Next" when you are ready to begin! Good luck and have fun!
-            </p>
-            <a href="#" class="btn btn-primary" id="introSubmit">Next</a>
-        </div>
-    </div>
+    <main class="container">
+        <div class="row-A"></div>
+        <br>
+        <div class="row-A">
+            <div class="col-xs-1 col-md-1 col-lg-1"></div>
+            <!--This column has all the content-->
+            <div class="col-xs-10 col-md-7 col-lg-6">
 
-    <div class="card container col-5 q1" style="text-align: center;">
-        <div class="card-body">
-            <h5 class="card-title">Question 1: What determines the structure of a webpage?</h5>
-            <ul>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1True">A: HTML</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1False1">B: CSS</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1False2">C: JavaScript</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1False3">D. Web API's</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q1False4">E. jQuery</button>
-            </ul>
-            <h5 class="displayResult1">Result: </h5>
-            <a href="#" class="btn btn-primary" id="q1Submit">Next</a>
-        </div>
-    </div>
+                <div class="intro-card">
+                    <div class="row no-gutters">
+                        <section class="card-body text-center">
+                            <h3 class="card-title mb-3">Welcome to the Week 4 Coding Quiz!</h3>
+                            <p id="intro-content">Instructions: This quiz is designed to test your coding knowledge
+                                this far in the course at a very macro level.
+                                This quiz contains five multiple-choice questions, which you will be given 75 seconds to
+                                complete. At the end of the quiz you will
+                                be given the option of recording your score. Click "Next" when you are ready
+                                to begin! Good luck and have fun!</p>
+                            <button type="button" onclick="startTimer()" class="btn btn-secondary btn-lg btn-block">Next</button>
+                        </section>
+                    </div>
+                </div>
 
-    <div class="card container col-5 q2" style="text-align: center;">
-        <div class="card-body">
-            <h5 class="card-title">Question 2: What determines the styling of a webpage?</h5>
-            <ul>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2False1">A: HTML</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2True">B: CSS</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2False2">C: JavaScript</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2False3">D. Web API's</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q2False4">E. jQuery</button>
-            </ul>
-            <h5 class="displayResult2">Result: </h5>
-            <a href="#" class="btn btn-primary" id="q2Submit">Next</a>
-        </div>
-    </div>
+                <div class="question-card">
+                    <div class="row no-gutters">
+                        <section class="card-body text-center">
+                            <h3 id="quiz-question" class="card-title mb-3">What do web developers use to structure a web page?</h3>
+                            <p id="quiz-options">
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QAT">HTML</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QBF">CSS</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QCF">JavaScript</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QDF">Web API's</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QEF">jQuery</button>
+                            </p>
+                            <h4><span id="result"></span></h4>
+                            <button id = "to-question-2" type="button" onclick="toQuestion2()" class="btn btn-secondary btn-lg btn-block">Next</button>
+                        </section>
+                    </div>
+                </div>
 
-    <div class="card container col-5 q3" style="text-align: center;">
-        <div class="card-body">
-            <h5 class="card-title">Question 3: What controls the functionality of a webpage?</h5>
-            <ul>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q3False1">A: HTML</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q3False2">B: CSS</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q3True">C: JavaScript</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q3False3">D. Web API's</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q3False4">E. jQuery</button>
-            </ul>
-            <h5 class="displayResult3">Result: </h5>
-            <a href="#" class="btn btn-primary" id="q3Submit">Next</a>
-        </div>
-    </div>
+                <div class="conclusion-card">
+                    <div class="row no-gutters">
+                        <section class="card-body text-center">
+                            <h3 id="quiz-question" class="card-title mb-3">Welcome to the Week 4 Coding Quiz!</h3>
+                            <p id="quiz-options">
+                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option A</button>
+                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option B</button>
+                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option C</button>
+                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option D</button>
+                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option E</button>
+                            </p>
+                            <p id="intro-content" class="instructions">Instructions: This quiz is designed to test your coding knowledge
+                                this far in the course at a very macro level.
+                                This quiz contains five multiple-choice questions, which you will be given 75 seconds to
+                                complete. At the end of the quiz you will
+                                be given the option of recording your score. Click "Next" when you are ready
+                                to begin! Good luck and have fun!</p>
+                            <button id = "next" type="button" onclick="startTimer()" class="btn btn-secondary btn-lg btn-block">Next</button>
+                        </section>
+                    </div>
+                </div>
 
-    <div class="card container col-5 q4" style="text-align: center;">
-        <div class="card-body">
-            <h5 class="card-title">Question 4: What interacts with the browser to enable user actions to change elements of a webpage?</h5>
-            <ul>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q4False1">A: HTML</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q4False2">B: CSS</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q4False3">C: JavaScript</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q4True">D. Web API's</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q4False4">E. jQuery</button>
-            </ul>
-            <h5 class="displayResult4">Result: </h5>
-            <a href="#" class="btn btn-primary" id="q4Submit">Next</a>
+            </div>
+            <div class="col-xs-1 col-md-4 col-lg-5"></div>
         </div>
-    </div>
+        <div class="row-tall"></div>
+    </main>
 
-    <div class="card container col-5 q5" style="text-align: center;">
-        <div class="card-body">
-            <h5 class="card-title">Question 5: What simplifies the usage of JavaScript?</h5>
-            <ul>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q5False1">A: HTML</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q5False2">B: CSS</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q5False3">C: JavaScript</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q5False4">D. Web API's</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block" id="q5True">E. jQuery</button>
-            </ul>
-            <h5 class="displayResult5">Result: </h5>
-            <a href="#" class="btn btn-primary" id="q5Submit">Next</a>
-        </div>
-    </div>
-    <!-- Add span class for the score -->
-    <div class="card container col-5" style="text-align: center;">
-        <h3 class="card-header">You have completed the quiz!</h3>
-        <div class="card-body">
-            <h5 class="card-title">Your score is:</h5><span id="finalScore"></span>
-            <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputinitials4" id="userInitials">Initials</label>
-                    <input type="initials" class="form-control" id="inputinitials">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputScore4" id="userScore">Score</label>
-                    <input type="score" class="form-control" id="inputScore">
-                  </div>
-                <button type="submit" class="btn btn-primary" id="saveFinalResults">Save Score</button>
-              </form>
-
-        </div>
-    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
