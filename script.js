@@ -1,11 +1,14 @@
-
 var introCard = document.querySelector(".intro-card");
 var questionCard = document.querySelector(".question-card");
 var conclusionCard = document.querySelector(".conclusion-card");
 
 var quizQuestion = document.querySelector("#quiz-question");
 
+var question1 = "What do web developers use to structure a web page?";
 var question2 = "What do web developers use to set the style of a web page?";
+var question3 = "What do web developers use to set the functionality of a web page?";
+var question4 = "What do web developers use to manipulate a web page using the DOM structure?";
+var question5 = "What can web developers use to their use of JavaScript?";
 
 // Timer:
 
@@ -30,7 +33,7 @@ questionCard.setAttribute("style", "display: block");
 };
 
 function toQuestion2() {
-    quizQuestion.textContent = question2;
+    quizQuestion = question2;
 }
 
 toQuestion2();
