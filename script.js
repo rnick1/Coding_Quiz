@@ -28,11 +28,7 @@ document.getElementById("4QBF").addEventListener("click",selectIncorrect);
 document.getElementById("4QCF").addEventListener("click",selectIncorrect);
 document.getElementById("4QDT").addEventListener("click",selectCorrect);
 
-var questionResult = document.getElementById("result");
-
-// function showResult() {
-//     scoreEach.textContent = score;
-// }
+var questionResult = document.getElementByClassName("result");
 
 function selectCorrect() {
     questionResult.textContent = "Correct!";
