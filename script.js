@@ -22,6 +22,7 @@ function startQuiz() {
     }, 1000);
     introCard.setAttribute("style", "display: none");
     questionCard.setAttribute("style", "display: block");
+    setupQuestion1();
 };
 
 var question1 = {
@@ -56,6 +57,20 @@ var question4 = {
     optionD: "Web API's",
 };
 
+var quizOptionA = document.querySelector("#qOptionA");
+var quizOptionB = document.querySelector("#qOptionB");
+var quizOptionC = document.querySelector("#qOptionC");
+var quizOptionD = document.querySelector("#qOptionD");
+
+
+function setupQuestion1() {
+    quizQuestion.textContent = question1.question
+    quizOptionA.textContent = question1.optionA
+    quizOptionB.textContent = question1.optionB
+    quizOptionC.textContent = question1.optionC
+    quizOptionD.textContent = question1.optionD
+
+}
 
 
 
