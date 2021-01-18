@@ -24,6 +24,38 @@ function startQuiz() {
     questionCard.setAttribute("style", "display: block");
 };
 
+var question1 = {
+    question: "What do web developers use to structure a web page?",
+    optionA: "HTML",
+    optionB: "CSS",
+    optionC: "JavaScript",
+    optionD: "Web API's",
+};
+
+var question2 = {
+    question: "What do web developers use to structure a web page?",
+    optionA: "HTML",
+    optionB: "CSS",
+    optionC: "JavaScript",
+    optionD: "Web API's",
+};
+
+var question3 = {
+    question: "What do web developers use to structure a web page?",
+    optionA: "HTML",
+    optionB: "CSS",
+    optionC: "JavaScript",
+    optionD: "Web API's",
+};
+
+var question4 = {
+    question: "What do web developers use to structure a web page?",
+    optionA: "HTML",
+    optionB: "CSS",
+    optionC: "JavaScript",
+    optionD: "Web API's",
+};
+
 
 
 
