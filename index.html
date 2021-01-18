@@ -109,35 +109,46 @@
                                 <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QEF">jQuery</button>
                             </p>
                             <h4><span id="result"></span></h4>
-                            <button type="button" onclick="toQuestion4()" class="btn btn-secondary btn-lg btn-block">Next</button>
+                            <button type="button" onclick="toQuestion5()" class="btn btn-secondary btn-lg btn-block">Next</button>
                         </section>
                     </div>
                 </div>
 
-
-
-
-
-
-
-                <div class="conclusion-card">
+                <div class="question-card-5">
                     <div class="row no-gutters">
                         <section class="card-body text-center">
-                            <h3 id="quiz-question" class="card-title mb-3">Welcome to the Week 4 Coding Quiz!</h3>
+                            <h3 id="quiz-question" class="card-title mb-3">What can web developers use to enhance the use of JavaScript?</h3>
                             <p id="quiz-options">
-                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option A</button>
-                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option B</button>
-                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option C</button>
-                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option D</button>
-                            <button type="button" class="btn btn-secondary btn-lg btn-block">Option E</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QAT">HTML</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QBF">CSS</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QCF">JavaScript</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QDF">Web API's</button>
+                                <button type="button" class="btn btn-secondary btn-lg btn-block" id="1QEF">jQuery</button>
                             </p>
-                            <p id="intro-content" class="instructions">Instructions: This quiz is designed to test your coding knowledge
-                                this far in the course at a very macro level.
-                                This quiz contains five multiple-choice questions, which you will be given 75 seconds to
-                                complete. At the end of the quiz you will
-                                be given the option of recording your score. Click "Next" when you are ready
-                                to begin! Good luck and have fun!</p>
-                            <button id = "next" type="button" onclick="startTimer()" class="btn btn-secondary btn-lg btn-block">Next</button>
+                            <h4><span id="result"></span></h4>
+                            <button type="button" onclick="toFinish()" class="btn btn-secondary btn-lg btn-block">Next</button>
+                        </section>
+                    </div>
+                </div>
+
+                <div id="conclusion-card">
+                    <div class="row no-gutters">
+                        <section class="card-body text-center">
+                            <h3 class="card-header">You have completed the quiz!</h3>
+                            <div class="card-body">
+                                <h5 class="card-title">Your score is:</h5><span id="finalScore"></span>
+                                <form>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="inputinitials4" id="userInitials">Initials</label>
+                                        <input type="initials" class="form-control" id="inputinitials">
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputScore4" id="userScore">Score</label>
+                                        <input type="score" class="form-control" id="inputScore">
+                                      </div>
+                                    <button type="submit" class="btn btn-primary" id="saveFinalResults">Save Score</button>
+                                  </form>
                         </section>
                     </div>
                 </div>

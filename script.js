@@ -4,8 +4,7 @@ var questionCard2 = document.querySelector(".question-card-2");
 var questionCard3 = document.querySelector(".question-card-3");
 var questionCard4 = document.querySelector(".question-card-4");
 var questionCard5 = document.querySelector(".question-card-5");
-
-var conclusionCard = document.querySelector(".conclusion-card");
+var conclusionCard = document.querySelector("#conclusion-card");
 
 var quizQuestion = document.querySelector("#quiz-question");
 
@@ -45,8 +44,15 @@ function toQuestion4() {
     questionCard4.setAttribute("style", "display: block");
 }
 
+function toQuestion5() {
+    questionCard4.setAttribute("style", "display: none");
+    questionCard5.setAttribute("style", "display: block");
+}
 
-// var question5 = "What can web developers use to their use of JavaScript?";
+function toFinish() {
+    questionCard5.setAttribute("style", "display: none");
+    conclusionCard.setAttribute("style", "display: block");
+}
 
 // var Q2toQ3 = document.querySelector("#to-question-3");
 // var Q3toQ4 = document.querySelector("#to-question-4");

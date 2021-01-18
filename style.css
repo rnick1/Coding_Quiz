@@ -52,3 +52,11 @@ body{
 .question-card-4{
     display: none;
 }
+
+.question-card-5{
+    display: none;
+}
+
+#conclusion-card{
+    display: none;
+}
