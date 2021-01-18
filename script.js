@@ -1,6 +1,6 @@
 var timeLeft = document.querySelector("#time-left");
 var introCard = document.querySelector("#intro-card");
-var startQuizButton = document.getElementById("start-quiz-button").addEventListener("click", startTimer);
+var startQuizButton = document.getElementById("start-quiz-button").addEventListener("click", startQuiz);
 var questionCard = document.querySelector("#question-card");
 var quizQuestion = document.querySelector("#quiz-question");
 var quizOptions = document.querySelector("#quiz-options");
@@ -10,7 +10,7 @@ var nextQuestion = document.querySelector("#next");
 // For timer:
 var secondsLeft = 75;
 
-function startTimer() {
+function startQuiz() {
     timerInterval = setInterval(function() {
         secondsLeft--;
         timeLeft.textContent = secondsLeft + " seconds remaining";
@@ -20,7 +20,8 @@ function startTimer() {
             alert("I am sorry, but you have run out of time. Better luck next time!");
         }
     }, 1000);
-
+    introCard.setAttribute("style", "display: none");
+    questionCard.setAttribute("style", "display: block");
 };
 
 
