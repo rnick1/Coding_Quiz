@@ -6,14 +6,42 @@ var questionCard3 = document.querySelector(".question-card-3");
 var questionCard4 = document.querySelector(".question-card-4");
 var conclusionCard = document.querySelector("#conclusion-card");
 
-var A1T = document.getElementById("#1QAT");
-var B1F = document.getElementById("#1QBF");
-var C1F = document.getElementById("#1QCF");
-var D1F = document.getElementById("#1QDF");
+// For score counter:
 
-var correctAnswers = ["1QAT", "2QBT", "3QCT", "4QDT", "5QET"]
-var incorrectAnswers = ["2QAF", "2QCF", "2QDF", "2QEF", "3QAF", "3QBF", "3QDF", "3QEF", "4QAF", 
-"4QBF", "4QCF", "4QEF", "5QAF", "1QBF", "5QCF", "5QDF"];
+document.getElementById("1QAT").addEventListener("click",selectCorrect);
+document.getElementById("1QBF").addEventListener("click",selectIncorrect);
+document.getElementById("1QCF").addEventListener("click",selectIncorrect);
+document.getElementById("1QDF").addEventListener("click",selectIncorrect);
+
+document.getElementById("2QAF").addEventListener("click",selectIncorrect);
+document.getElementById("2QBT").addEventListener("click",selectCorrect);
+document.getElementById("2QCF").addEventListener("click",selectIncorrect);
+document.getElementById("2QDF").addEventListener("click",selectIncorrect);
+
+document.getElementById("3QAF").addEventListener("click",selectIncorrect);
+document.getElementById("3QBF").addEventListener("click",selectIncorrect);
+document.getElementById("3QCT").addEventListener("click",selectCorrect);
+document.getElementById("3QDF").addEventListener("click",selectIncorrect);
+
+document.getElementById("4QAF").addEventListener("click",selectIncorrect);
+document.getElementById("4QBF").addEventListener("click",selectIncorrect);
+document.getElementById("4QCF").addEventListener("click",selectIncorrect);
+document.getElementById("4QDT").addEventListener("click",selectCorrect);
+
+var questionResult = document.getElementById("result");
+
+// function showResult() {
+//     scoreEach.textContent = score;
+// }
+
+function selectCorrect() {
+    questionResult.textContent = "Correct!";
+};
+
+function selectIncorrect() {
+    questionResult.textContent = "Incorrect!";
+};
+
 // For timer:
 var timeLimit = document.getElementById("time");
 var secondsLeft = 75;
@@ -49,33 +77,36 @@ function toQuestion4() {
 }
 
 function toFinish() {
-    questionCard5.setAttribute("style", "display: none");
+    questionCard4.setAttribute("style", "display: none");
     conclusionCard.setAttribute("style", "display: block");
 }
 
-// Everything below is related to correct/incorrect answers arrays and addEventListeners:
 
 
-// document.getElementById('generate').addEventListener('click', writePassword);
+// var A1T = document.getElementById("#1QAT");
+// var B1F = document.getElementById("#1QBF");
+// var C1F = document.getElementById("#1QCF");
+// var D1F = document.getElementById("#1QDF");
 
-// document.querySelectorAll(".btn btn-secondary btn-lg btn-block").forEach(item => {item.addEventListener("click", event => {}})
+// var A2F = document.getElementById("#2QAF");
+// var B2T = document.getElementById("#2QBT");
+// var C2F = document.getElementById("#2QCF");
+// var D2F = document.getElementById("#2QDF");
 
-// .forEach(correctAnswers=> {correctAnswers,addEventListener("click," startTimer()})
+// var A3F = document.getElementById("#3QAF");
+// var B3F = document.getElementById("#3QBF");
+// var C3T = document.getElementById("#3QCT");
+// var D3F = document.getElementById("#3QDF");
 
-for(i = 0; correctAnswers.length; i++) {
-    correctAnswers[i].addEventListener("click", selectsCorrect())
-};
+// var A4F = document.getElementById("#4QAF");
+// var B4F = document.getElementById("#4QBF");
+// var C4F = document.getElementById("#4QCF");
+// var D4T = document.getElementById("#4QDT");
 
-function selectsCorrect() {
-    score++;
+// var correctAnswers = ["A1T", "B2T", "C3T", "D4T"];
+// var incorrectAnswers = ["B1F", "C1F", "D1F", "A2F", "C2F", "D2F", "A3F", "B3F", "D3F", "A4F", "B4F", "C4F"];
 
-};
+// var score = 0
 
-
-
-var score = document.querySelector("#score");
-score = 0
-
-function selectsIncorrect() {
-    score--;
-};
+// A1T.addEventListener("click", selectCorrect());
+// // incorrectAnswers.addEventListener("click", selectIncorrect());
