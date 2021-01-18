@@ -7,38 +7,6 @@ var questionCard4 = document.querySelector(".question-card-4");
 var questionCard5 = document.querySelector(".question-card-5");
 var conclusionCard = document.querySelector("#conclusion-card");
 
-// For Question 1:
-// var question1OpA = document.querySelector("#1QAT");
-// var question1OpB = document.querySelector("#1QBF");
-// var question1OpC = document.querySelector("#1QCF");
-// var question1OpD = document.querySelector("#1QDF");
-// var question1OpE = document.querySelector("#1QEF");
-
-// document.querySelectorAll(".btn btn-secondary btn-lg btn-block").forEach(item => {item.addEventListener("click", event => {}})
-var correctAnswers = ["1QAT", "2QBT", "3QCT", "4QDT", "5QET"];
-var incorrectAnswers = ["1QBF", "1QCF", "1QDF", "1QEF", "2QAF", "2QCF", "2QDF", "2QEF", "3QAF", "3QBF", "3QDF", "3QEF", "4QAF", 
-"4QBF", "4QCF", "4QEF", "5QAF", "1QBF", "5QCF", "5QDF"];
-
-// score = 0
-// var totalScore = document.querySelector("#score");
-
-// correctAnswers.addEventListener("click", function() {
-//     count++;
-//     setScore();
-// });
-
-// function setScore() {
-//     totalScore.textContent = score;
-// }
-
-// setScore();
-
-
-
-
-
-
-
 // For timer:
 var timeLimit = document.getElementById("time");
 var secondsLeft = 75;
@@ -83,9 +51,32 @@ function toFinish() {
     conclusionCard.setAttribute("style", "display: block");
 }
 
-// var Q2toQ3 = document.querySelector("#to-question-3");
-// var Q3toQ4 = document.querySelector("#to-question-4");
-// var Q4toQ5 = document.querySelector("#to-question-5");
-// var Q5toFinish = document.querySelector("#to-Finish");
 
 // document.getElementById('generate').addEventListener('click', writePassword);
+
+// document.querySelectorAll(".btn btn-secondary btn-lg btn-block").forEach(item => {item.addEventListener("click", event => {}})
+
+// .forEach(correctAnswers=> {correctAnswers,addEventListener("click," startTimer()})
+
+
+
+var correctAnswers = ["1QAT", "2QBT", "3QCT", "4QDT", "5QET"]
+for(i = 0; correctAnswers.length; i++) {
+    correctAnswers[i].addEventListener("click", selectsCorrect())
+
+};
+
+var incorrectAnswers = ["1QBF", "1QCF", "1QDF", "1QEF", "2QAF", "2QCF", "2QDF", "2QEF", "3QAF", "3QBF", "3QDF", "3QEF", "4QAF", 
+"4QBF", "4QCF", "4QEF", "5QAF", "1QBF", "5QCF", "5QDF"];
+
+var score = document.querySelector("#score");
+score = 0
+
+function selectsCorrect() {
+    score++;
+
+};
+
+function selectsIncorrect() {
+    score--;
+};
