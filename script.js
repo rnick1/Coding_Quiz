@@ -1,3 +1,4 @@
+// For cards:
 var introCard = document.querySelector(".intro-card");
 var questionCard1 = document.querySelector(".question-card-1");
 var questionCard2 = document.querySelector(".question-card-2");
@@ -6,12 +7,16 @@ var questionCard4 = document.querySelector(".question-card-4");
 var questionCard5 = document.querySelector(".question-card-5");
 var conclusionCard = document.querySelector("#conclusion-card");
 
-var quizQuestion = document.querySelector("#quiz-question");
+// For Question 1:
+var question1OpA = document.querySelector("#1QAT");
+var question1OpB = document.querySelector("#1QBF");
+var question1OpC = document.querySelector("#1QCF");
+var question1OpD = document.querySelector("#1QDF");
+var question1OpE = document.querySelector("#1QEF");
 
-// Timer:
 
+// For timer:
 var timeLimit = document.getElementById("time");
-
 var secondsLeft = 75;
 
 function startTimer() {
