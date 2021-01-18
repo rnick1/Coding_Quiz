@@ -33,10 +33,14 @@ body{
     background-color: grey;
 }
 
-.question-card{
+.question-card-1{
     display: none;
 }
 
 .conclusion-card{
+    display: none;
+}
+
+.question-card-2{
     display: none;
 }
