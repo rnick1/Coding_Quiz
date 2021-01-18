@@ -35,10 +35,17 @@ function toQuestion2() {
     questionCard2.setAttribute("style", "display: block");
 }
 
+function toQuestion3() {
+    questionCard2.setAttribute("style", "display: none");
+    questionCard3.setAttribute("style", "display: block");
+}
+
+function toQuestion4() {
+    questionCard3.setAttribute("style", "display: none");
+    questionCard4.setAttribute("style", "display: block");
+}
 
 
-// var question3 = "What do web developers use to set the functionality of a web page?";
-// var question4 = "What do web developers use to manipulate a web page using the DOM structure?";
 // var question5 = "What can web developers use to their use of JavaScript?";
 
 // var Q2toQ3 = document.querySelector("#to-question-3");
