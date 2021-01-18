@@ -51,6 +51,8 @@ function toFinish() {
     conclusionCard.setAttribute("style", "display: block");
 }
 
+// Everything below is related to correct/incorrect answers arrays and addEventListeners:
+
 
 // document.getElementById('generate').addEventListener('click', writePassword);
 
@@ -58,11 +60,13 @@ function toFinish() {
 
 // .forEach(correctAnswers=> {correctAnswers,addEventListener("click," startTimer()})
 
-
-
 var correctAnswers = ["1QAT", "2QBT", "3QCT", "4QDT", "5QET"]
 for(i = 0; correctAnswers.length; i++) {
     correctAnswers[i].addEventListener("click", selectsCorrect())
+};
+
+function selectsCorrect() {
+    score++;
 
 };
 
@@ -71,11 +75,6 @@ var incorrectAnswers = ["1QBF", "1QCF", "1QDF", "1QEF", "2QAF", "2QCF", "2QDF", 
 
 var score = document.querySelector("#score");
 score = 0
-
-function selectsCorrect() {
-    score++;
-
-};
 
 function selectsIncorrect() {
     score--;
