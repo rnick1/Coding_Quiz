@@ -20,10 +20,6 @@ body{
     text-align: left;
 }
 
-.navbar-text{
-    float: right;
-}
-
 #time{
     font-size: x-small;
     color: red;
@@ -33,27 +29,11 @@ body{
     background-color: grey;
 }
 
-.question-card-1{
+#intro-card{
     display: none;
 }
 
-.conclusion-card{
-    display: none;
-}
-
-.question-card-2{
-    display: none;
-}
-
-.question-card-3{
-    display: none;
-}
-
-.question-card-4{
-    display: none;
-}
-
-.question-card-5{
+#question-card{
     display: none;
 }
 
