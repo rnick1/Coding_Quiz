@@ -134,11 +134,10 @@ function saveLastScore() {
 function renderLastScore() {
     var lastScore = JSON.parse(localStorage.getItem("userScore"));
     if (lastScore !== null) {
-    document.getElementById("input-initials").innerHTML = lastScore.Initials;
-    document.getElementById("input-score").innerHTML = lastScore.Score;
+    document.getElementById("inputinitials").innerHTML = lastScore.Initials;
+    document.getElementById("inputScore").innerHTML = lastScore.Score;
     } else {
       return;
     }
 }
-
-document.getElementById("saved-name").innerHTML = lastScore.Initials
+    // document.getElementById("saved-name").innerHTML = lastScore.Initials
