@@ -16,6 +16,13 @@ var quizQuestion1 = "What do web developers use to structure a web page?";
 var quizQuestion2 = "What do web developers use to set the style of a web page?";
 var quizQuestion3 = "What do web developers use to set the functionality of a web page?";
 var quizQuestion4 = "What do web developers use to manipulate a web page using the DOM structure?";
+// Score counter:
+var totalScore = document.querySelector("#score");
+var count = 0;
+
+function incrementScore() {
+    totalScore.textContent = count + " out of four!"
+};
 
 // For timer:
 var secondsLeft = 75;
@@ -35,9 +42,6 @@ function startQuiz() {
     setupQuestion1();
 };
 
-var correctResponses = [];
-console.log(correctResponses);
-
 function setupQuestion1() {
     quizQuestion.textContent = quizQuestion1
     quizOptionA.addEventListener("click", selectsCorrect);
@@ -51,7 +55,8 @@ function setupQuestion1() {
         quizOptionB.disabled = true;
         quizOptionC.disabled = true;
         quizOptionD.disabled = true;
-
+        count++;
+        incrementScore();
     };
 
     function selectsIncorrect() {
@@ -60,12 +65,6 @@ function setupQuestion1() {
         quizOptionB.disabled = true;
         quizOptionC.disabled = true;
         quizOptionD.disabled = true;
-        // secondsLeft = timeLeft-10;
-
-    if (result === "Correct!") {
-        correctResponses.unshift("Q1Correct");
-    }
-    };
 
     nextQuestion.addEventListener("click", setupQuestion2);
 };
@@ -126,4 +125,4 @@ function setupQuestion4() {
     };
 
     nextQuestion.addEventListener("click", setupConclusion);
-};
+}};
