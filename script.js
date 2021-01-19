@@ -6,6 +6,7 @@ var quizQuestion = document.querySelector("#quiz-question");
 var quizOptions = document.querySelector("#quiz-options");
 var result = document.querySelector("#result");
 var nextQuestion = document.querySelector("#next");
+var conclusionCard = document.querySelector("#conclusion-card");
 
 var quizOptionA = document.querySelector("#qOptionA")
 var quizOptionB = document.querySelector("#qOptionB")
@@ -19,10 +20,6 @@ var quizQuestion4 = "What do web developers use to manipulate a web page using t
 // Score counter:
 var totalScore = document.querySelector("#score");
 var count = 0;
-
-function incrementScore() {
-    totalScore.textContent = count + " out of four!"
-};
 
 // For timer:
 var secondsLeft = 75;
@@ -48,25 +45,25 @@ function setupQuestion1() {
     quizOptionB.addEventListener("click", selectsIncorrect);
     quizOptionC.addEventListener("click", selectsIncorrect);
     quizOptionD.addEventListener("click", selectsIncorrect);
-    
-    function selectsCorrect() {
-        result.textContent = "Correct!";
-        quizOptionA.disabled = true;
-        quizOptionB.disabled = true;
-        quizOptionC.disabled = true;
-        quizOptionD.disabled = true;
-        count++;
-        incrementScore();
-    };
-
-    function selectsIncorrect() {
-        result.textContent = "Incorrect!";
-        quizOptionA.disabled = true;
-        quizOptionB.disabled = true;
-        quizOptionC.disabled = true;
-        quizOptionD.disabled = true;
-
     nextQuestion.addEventListener("click", setupQuestion2);
+};
+
+function selectsCorrect() {
+    result.textContent = "Correct!";
+    quizOptionA.disabled = true;
+    quizOptionB.disabled = true;
+    quizOptionC.disabled = true;
+    quizOptionD.disabled = true;
+    count++;
+    totalScore.textContent = count + " out of four!";
+};
+
+function selectsIncorrect() {
+    result.textContent = "Incorrect!";
+    quizOptionA.disabled = true;
+    quizOptionB.disabled = true;
+    quizOptionC.disabled = true;
+    quizOptionD.disabled = true;
 };
 
 function setupQuestion2() {
@@ -79,15 +76,6 @@ function setupQuestion2() {
     quizOptionB.disabled = false;
     quizOptionC.disabled = false;
     quizOptionD.disabled = false;
-
-    function selectsCorrect() {
-        result.textContent = "Correct!";
-    };
-
-    function selectsIncorrect() {
-        result.textContent = "Incorrect!";
-    };
-
     nextQuestion.addEventListener("click", setupQuestion3);
 };
 
@@ -97,15 +85,6 @@ function setupQuestion3() {
     quizOptionB.addEventListener("click", selectsIncorrect);
     quizOptionC.addEventListener("click", selectsCorrect);
     quizOptionD.addEventListener("click", selectsIncorrect);
-    
-    function selectsCorrect() {
-        result.textContent = "Correct!";
-    };
-
-    function selectsIncorrect() {
-        result.textContent = "Incorrect!";
-    };
-
     nextQuestion.addEventListener("click", setupQuestion4);
 };
 
@@ -115,14 +94,11 @@ function setupQuestion4() {
     quizOptionB.addEventListener("click", selectsIncorrect);
     quizOptionC.addEventListener("click", selectsIncorrect);
     quizOptionD.addEventListener("click", selectsCorrect);
-    
-    function selectsCorrect() {
-        result.textContent = "Correct!";
-    };
-
-    function selectsIncorrect() {
-        result.textContent = "Incorrect!";
-    };
-
     nextQuestion.addEventListener("click", setupConclusion);
-}};
+};
+
+function setupConclusion() {
+    questionCard.setAttribute("style", "display: none");
+    conclusionCard.setAttribute("style", "display: block");
+    clearInterval(timerInterval);
+};
