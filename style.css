@@ -35,3 +35,11 @@ body{
 #scores-card{
     display: none;
 }
+
+#time-left{
+    padding: 100px;
+}
+
+#score{
+    padding: 100px;
+}

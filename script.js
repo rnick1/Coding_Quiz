@@ -113,7 +113,15 @@ function setupScores() {
 // Here are the lines of code that I was hoping would 1. store user initials and score locally and 2. display it on a score page.
 var inputInitials = document.querySelector("#inputinitials");
 var inputScore = document.querySelector("#inputScore");
-var submitScore = document.querySelector("#saveFinalResults").addEventListener("click", storeAndDisplay);
+var submitScore = document.getElementById("saveFinalResults").addEventListener("click", storeAndDisplay);
+
+function storeAndDisplay(event) {
+    event.preventDefault();
+    saveLastScore();  
+    renderLastScore();
+    conclusionCard.setAttribute("style", "display: none");
+    scoresCard.setAttribute("style", "display: block");
+    };
 
 function saveLastScore() {
     var userScore = {
@@ -133,10 +141,4 @@ function renderLastScore() {
     }
 }
 
-function storeAndDisplay(event) {
-    event.preventDefault();
-    saveLastScore();  
-    renderLastScore();
-    };
-
-    document.getElementById("saved-name").innerHTML = lastScore.Initials
+document.getElementById("saved-name").innerHTML = lastScore.Initials
