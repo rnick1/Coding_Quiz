@@ -126,14 +126,17 @@ function saveLastScore() {
 function renderLastScore() {
     var lastScore = JSON.parse(localStorage.getItem("userScore"));
     if (lastScore !== null) {
-    document.getElementById("saved-name").innerHTML = lastScore.Initials;
-    document.getElementById("saved-grade").innerHTML = lastScore.Score;
+    document.getElementById("input-initials").innerHTML = lastScore.Initials;
+    document.getElementById("input-score").innerHTML = lastScore.Score;
     } else {
       return;
     }
 }
 
-function storeAndDisplay() {
+function storeAndDisplay(event) {
+    event.preventDefault();
     saveLastScore();  
     renderLastScore();
     };
+
+    document.getElementById("saved-name").innerHTML = lastScore.Initials
