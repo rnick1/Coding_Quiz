@@ -7,6 +7,16 @@ var quizOptions = document.querySelector("#quiz-options");
 var result = document.querySelector("#result");
 var nextQuestion = document.querySelector("#next");
 
+var quizOptionA = document.querySelector("#qOptionA")
+var quizOptionB = document.querySelector("#qOptionB")
+var quizOptionC = document.querySelector("#qOptionC")
+var quizOptionD = document.querySelector("#qOptionD")
+
+var quizQuestion1 = "What do web developers use to structure a web page?";
+var quizQuestion2 = "What do web developers use to set the style of a web page?";
+var quizQuestion3 = "What do web developers use to set the functionality of a web page?";
+var quizQuestion4 = "What do web developers use to manipulate a web page using the DOM structure?";
+
 // For timer:
 var secondsLeft = 75;
 
@@ -25,187 +35,95 @@ function startQuiz() {
     setupQuestion1();
 };
 
-var question1 = {
-    question: "What do web developers use to structure a web page?",
-    optionA: "HTML",
-    optionB: "CSS",
-    optionC: "JavaScript",
-    optionD: "Web API's",
-    questionResult:" ",
-};
-
-var question2 = {
-    question: "What do web developers use to set the style of a web page?",
-    optionA: "HTML",
-    optionB: "CSS",
-    optionC: "JavaScript",
-    optionD: "Web API's",
-};
-
-var question3 = {
-    question: "What do web developers use to set the functionality of a web page?",
-    optionA: "HTML",
-    optionB: "CSS",
-    optionC: "JavaScript",
-    optionD: "Web API's",
-};
-
-var question4 = {
-    question: "What do web developers use to manipulate a web page using the DOM structure?",
-    optionA: "HTML",
-    optionB: "CSS",
-    optionC: "JavaScript",
-    optionD: "Web API's",
-};
-
-// function addToVariable() {
-//     storeVariable = [];
-//     push.storeVariable()
-// }
-// // When user clicks on one of these options, the result will go to addToVariable(). addToVariable will push the result to storeVariable.
-// var quizOptionA = document.querySelector("#qOptionA").addEventListener("click", addToVariable);
-// var quizOptionB = document.querySelector("#qOptionB").addEventListener("click",);
-// var quizOptionC = document.querySelector("#qOptionC").addEventListener("click",);
-// var quizOptionD = document.querySelector("#qOptionD").addEventListener("click",);
-
+var correctResponses = [];
+console.log(correctResponses);
 
 function setupQuestion1() {
-    quizQuestion.textContent = question1.question
-    quizOptionA.textContent = question1.optionA
-    quizOptionB.textContent = question1.optionB
-    quizOptionC.textContent = question1.optionC
-    quizOptionD.textContent = question1.optionD
-
-    var quizOptionA = document.querySelector("#qOptionA").addEventListener("click", selectsCorrect());
-    var quizOptionB = document.querySelector("#qOptionB").addEventListener("click", selectsIncorrect);
-    var quizOptionC = document.querySelector("#qOptionC").addEventListener("click", selectsIncorrect);
-    var quizOptionD = document.querySelector("#qOptionD").addEventListener("click", selectsIncorrect);
+    quizQuestion.textContent = quizQuestion1
+    quizOptionA.addEventListener("click", selectsCorrect);
+    quizOptionB.addEventListener("click", selectsIncorrect);
+    quizOptionC.addEventListener("click", selectsIncorrect);
+    quizOptionD.addEventListener("click", selectsIncorrect);
     
-    selectsCorrect() {
-        question1.questionResult.textContent = "Correct!";
+    function selectsCorrect() {
+        result.textContent = "Correct!";
+        quizOptionA.disabled = true;
+        quizOptionB.disabled = true;
+        quizOptionC.disabled = true;
+        quizOptionD.disabled = true;
+
     };
 
-    selectsIncorrect() {
-        question1.questionResult.textContent = "Incorrect!";
+    function selectsIncorrect() {
+        result.textContent = "Incorrect!";
+        quizOptionA.disabled = true;
+        quizOptionB.disabled = true;
+        quizOptionC.disabled = true;
+        quizOptionD.disabled = true;
+        // secondsLeft = timeLeft-10;
+
+    if (result === "Correct!") {
+        correctResponses.unshift("Q1Correct");
+    }
     };
 
-    // if(quizOptionA === true) {
-
-    // }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    nextQuestion.addEventListener("click", setupQuestion2);
+};
 
 function setupQuestion2() {
-    quizQuestion.textContent = question2.question
-    quizOptionA.textContent = question2.optionA
-    quizOptionB.textContent = question2.optionB
-    quizOptionC.textContent = question2.optionC
-    quizOptionD.textContent = question2.optionD
-}
+    quizQuestion.textContent = quizQuestion2
+    quizOptionA.addEventListener("click", selectsIncorrect);
+    quizOptionB.addEventListener("click", selectsCorrect);
+    quizOptionC.addEventListener("click", selectsIncorrect);
+    quizOptionD.addEventListener("click", selectsIncorrect);
+    quizOptionA.disabled = false;
+    quizOptionB.disabled = false;
+    quizOptionC.disabled = false;
+    quizOptionD.disabled = false;
 
+    function selectsCorrect() {
+        result.textContent = "Correct!";
+    };
 
+    function selectsIncorrect() {
+        result.textContent = "Incorrect!";
+    };
 
+    nextQuestion.addEventListener("click", setupQuestion3);
+};
 
+function setupQuestion3() {
+    quizQuestion.textContent = quizQuestion3
+    quizOptionA.addEventListener("click", selectsIncorrect);
+    quizOptionB.addEventListener("click", selectsIncorrect);
+    quizOptionC.addEventListener("click", selectsCorrect);
+    quizOptionD.addEventListener("click", selectsIncorrect);
+    
+    function selectsCorrect() {
+        result.textContent = "Correct!";
+    };
 
+    function selectsIncorrect() {
+        result.textContent = "Incorrect!";
+    };
 
+    nextQuestion.addEventListener("click", setupQuestion4);
+};
 
+function setupQuestion4() {
+    quizQuestion.textContent = quizQuestion4
+    quizOptionA.addEventListener("click", selectsIncorrect);
+    quizOptionB.addEventListener("click", selectsIncorrect);
+    quizOptionC.addEventListener("click", selectsIncorrect);
+    quizOptionD.addEventListener("click", selectsCorrect);
+    
+    function selectsCorrect() {
+        result.textContent = "Correct!";
+    };
 
+    function selectsIncorrect() {
+        result.textContent = "Incorrect!";
+    };
 
-
-
-
-
-// // For cards:
-// var introCard = document.querySelector(".intro-card");
-// var questionCard1 = document.querySelector(".question-card-1");
-// var questionCard2 = document.querySelector(".question-card-2");
-// var questionCard3 = document.querySelector(".question-card-3");
-// var questionCard4 = document.querySelector(".question-card-4");
-// var conclusionCard = document.querySelector("#conclusion-card");
-
-// // For score counter:
-
-// document.getElementById("1QAT").addEventListener("click",selectCorrect);
-// document.getElementById("1QBF").addEventListener("click",selectIncorrect);
-// document.getElementById("1QCF").addEventListener("click",selectIncorrect);
-// document.getElementById("1QDF").addEventListener("click",selectIncorrect);
-
-// document.getElementById("2QAF").addEventListener("click",selectIncorrect);
-// document.getElementById("2QBT").addEventListener("click",selectCorrect);
-// document.getElementById("2QCF").addEventListener("click",selectIncorrect);
-// document.getElementById("2QDF").addEventListener("click",selectIncorrect);
-
-// document.getElementById("3QAF").addEventListener("click",selectIncorrect);
-// document.getElementById("3QBF").addEventListener("click",selectIncorrect);
-// document.getElementById("3QCT").addEventListener("click",selectCorrect);
-// document.getElementById("3QDF").addEventListener("click",selectIncorrect);
-
-// document.getElementById("4QAF").addEventListener("click",selectIncorrect);
-// document.getElementById("4QBF").addEventListener("click",selectIncorrect);
-// document.getElementById("4QCF").addEventListener("click",selectIncorrect);
-// document.getElementById("4QDT").addEventListener("click",selectCorrect);
-
-// var questionResult = document.getElementByClassName("result");
-
-// function selectCorrect() {
-//     questionResult.textContent = "Correct!";
-// };
-
-// function selectIncorrect() {
-//     questionResult.textContent = "Incorrect!";
-// };
-
-// // For timer:
-// var timeLimit = document.getElementById("time");
-// var secondsLeft = 75;
-
-// function startTimer() {
-//     timerInterval = setInterval(function() {
-//         secondsLeft--;
-//         timeLimit.textContent = secondsLeft + " seconds remaining.";
-
-//         if(secondsLeft === 0) {
-//             clearInterval(timerInterval);
-//             alert("I am sorry, but you have run out of time. Better luck next time!");
-//         }
-//     }, 1000);
-
-//     introCard.setAttribute("style", "display: none");
-//     questionCard1.setAttribute("style", "display: block");
-// };
-
-// function toQuestion2() {
-//     questionCard1.setAttribute("style", "display: none");
-//     questionCard2.setAttribute("style", "display: block");
-// }
-
-// function toQuestion3() {
-//     questionCard2.setAttribute("style", "display: none");
-//     questionCard3.setAttribute("style", "display: block");
-// }
-
-// function toQuestion4() {
-//     questionCard3.setAttribute("style", "display: none");
-//     questionCard4.setAttribute("style", "display: block");
-// }
-
-// function toFinish() {
-//     questionCard4.setAttribute("style", "display: none");
-//     conclusionCard.setAttribute("style", "display: block");
-// }
+    nextQuestion.addEventListener("click", setupConclusion);
+};
