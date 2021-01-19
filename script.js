@@ -7,6 +7,8 @@ var quizOptions = document.querySelector("#quiz-options");
 var result = document.querySelector("#result");
 var nextQuestion = document.querySelector("#next");
 var conclusionCard = document.querySelector("#conclusion-card");
+var scoresCard = document.querySelector("#scores-card");
+var submitScore = document.querySelector("#submit-score").addEventListener("click", recordScore);
 
 var quizOptionA = document.querySelector("#qOptionA")
 var quizOptionB = document.querySelector("#qOptionB")
@@ -101,4 +103,10 @@ function setupConclusion() {
     questionCard.setAttribute("style", "display: none");
     conclusionCard.setAttribute("style", "display: block");
     clearInterval(timerInterval);
+    nextQuestion.addEventListener("click", setupScores);
 };
+
+function setupScores() {
+    conclusionCard.setAttribute("style", "display: none");
+    scoresCard.setAttribute("style", "display: block");
+}

@@ -67,7 +67,7 @@
                         <section class="card-body text-center">
                             <h3 class="card-header">You have completed the quiz!</h3>
                             <div class="card-body">
-                                <h5 class="card-title">Your score is:</h5><span id="finalScore"></span>
+                                <h5 class="card-title">Please record your score:</h5><span id="finalScore"></span>
                                 <form>
                                     <div class="form-row">
                                       <div class="form-group col-md-6">
@@ -78,7 +78,8 @@
                                         <label for="inputScore4" id="userScore">Score</label>
                                         <input type="score" class="form-control" id="inputScore">
                                       </div>
-                                    <button type="submit" class="btn btn-primary" id="saveFinalResults">Save Score</button>
+                                    <button type="submit-score" class="btn btn-secondary ml-5 mr-5" id="saveFinalResults">Save Score</button>
+                                    <button id="next" type="button" class="btn btn-secondary ml-5">See the Scores</button>
                                   </form>
                         </section>
                     </div>
@@ -87,21 +88,11 @@
                 <div id="scores-card">
                     <div class="row no-gutters">
                         <section class="card-body text-center">
-                            <h3 class="card-header">You have completed the quiz!</h3>
+                            <h3 class="card-header">Here are the high scores:</h3>
                             <div class="card-body">
-                                <h5 class="card-title">Your score is:</h5><span id="finalScore"></span>
-                                <form>
-                                    <div class="form-row">
-                                      <div class="form-group col-md-6">
-                                        <label for="inputinitials4" id="userInitials">Initials</label>
-                                        <input type="initials" class="form-control" id="inputinitials">
-                                      </div>
-                                      <div class="form-group col-md-6">
-                                        <label for="inputScore4" id="userScore">Score</label>
-                                        <input type="score" class="form-control" id="inputScore">
-                                      </div>
-                                    <button type="submit" class="btn btn-primary" id="saveFinalResults">Save Score</button>
-                                  </form>
+                                <ul>
+
+                                </ul>
                         </section>
                     </div>
                 </div>
