@@ -66,28 +66,37 @@
                                 <form>
                                     <div class="form-row">
                                       <div class="form-group col-md-6">
-                                        <label id="userInitials" for="inputinitials4">Initials</label>
-                                        <input id="inputinitials" type="initials" class="form-control">
+                                        <label for="inputinitials4">Initials</label>
+                                        <input id="user-initials" type="initials" class="form-control">
                                       </div>
-                                      <!-- Can possibly do without since the app is already tracking. -->
-                                      <!-- <div class="form-group col-md-6">
-                                        <label for="inputScore4" id="userScore">Score</label>
-                                        <input type="score" class="form-control" id="inputScore">
-                                      </div> -->
-                                    <button id="saveResult"type="submit-score" class="btn btn-secondary ml-5 mr-5">Save Score</button>
-                                    <button id="seeScore" type="button" class="btn btn-secondary ml-5">See the Scores</button>
+                                    <button id="save-score"type="submit-score" class="btn btn-secondary ml-5 mr-5">Save Score</button>
+                                    <button id="go-to-score" type="button" class="btn btn-secondary ml-5">See the Scores</button>
                                   </form>
                         </section>
                     </div>
                 </div>
+
 
                 <div id="scores-card">
                     <div class="row no-gutters">
                         <section class="card-body text-center">
                             <h2>Here are the scores:</h2>
                             <!-- Need a new row for each score. create a table. for each score append a new row. -->
-                            <p>Initials <span id="saved-name"></span></p>
-                            <p>Score <span id="saved-score"></span></p>
+                            <!-- <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th id = "name" scope="col">Initials</th>
+                                    <th id = "result" scope="col">Score</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+           
+                                </tbody>
+                              </table> -->
+                              <list>
+                                  <li id="displayed-result"></li>
+                                  
+                              </list>
                         </section>
                     </div>
                 </div>
