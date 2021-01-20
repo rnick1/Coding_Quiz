@@ -113,15 +113,16 @@ var saveScore = document.getElementById('#save-score');
 var userInitials = document.querySelector('#user-initials');
 var goToScore = document.getElementById('#go-to-score');
 var displayedResult = document.querySelector("#displayed-result");
+// When the object is inside the function, userScore is undefined. When it is outside the function, keepScore is null. 
 
-function keepScore() {};
+
+function keepScore() {
     var userScore = {
         Initials: userInitials.value,
         Score: count.value,
     };
-
-
-localStorage.setItem('userScore', JSON.stringify(userScore));
+    localStorage.setItem('userScore', JSON.stringify(userScore));
+};
     // localStorage.setItem('Score', JSON.stringify(Score));
     // userScore.Initials.textContent = userInitials;
     // userScore.Score.textContent = count;
@@ -130,5 +131,5 @@ localStorage.setItem('userScore', JSON.stringify(userScore));
     conclusionCard.setAttribute('style', 'display: none');
     scoresCard.setAttribute('style', 'display: block');
     localStorage.getItem('userScore', parseInt(displayedResult));
-
+    var displayedResult = JSON.parse(localStorage.getItem("userScore"));
 }
