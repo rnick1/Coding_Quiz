@@ -6,8 +6,6 @@ var quizQuestion = document.querySelector("#quiz-question");
 var quizOptions = document.querySelector("#quiz-options");
 var result = document.querySelector("#result");
 var nextQuestion = document.querySelector("#next");
-var conclusionCard = document.querySelector("#conclusion-card");
-var scoresCard = document.querySelector("#scores-card");
 
 var quizOptionA = document.querySelector("#qOptionA")
 var quizOptionB = document.querySelector("#qOptionB")
@@ -18,9 +16,6 @@ var quizQuestion1 = "What do web developers use to structure a web page?";
 var quizQuestion2 = "What do web developers use to set the style of a web page?";
 var quizQuestion3 = "What do web developers use to set the functionality of a web page?";
 var quizQuestion4 = "What do web developers use to manipulate a web page using the DOM structure?";
-// Score counter:
-var totalScore = document.querySelector("#score");
-var count = 0;
 
 // For timer:
 var secondsLeft = 75;
@@ -68,6 +63,7 @@ function selectsIncorrect() {
 };
 
 function setupQuestion2() {
+    result.textContent = "";
     quizQuestion.textContent = quizQuestion2
     quizOptionA.addEventListener("click", selectsIncorrect);
     quizOptionB.addEventListener("click", selectsCorrect);
@@ -110,47 +106,8 @@ function setupScores() {
     scoresCard.setAttribute("style", "display: block");
 }
 
-// Here are the lines of code that I was hoping would 1. store user initials and score locally and 2. display it on a score page.
-var inputInitials = document.querySelector("#inputinitials");
-var inputScore = document.querySelector("#inputScore");
-var submitScore = document.getElementById("saveFinalResults").addEventListener("click", storeAndDisplay);
+var totalScore = document.querySelector("#score");
+var count = 0;
+var conclusionCard = document.querySelector("#conclusion-card");
+var scoresCard = document.querySelector("#scores-card");
 
-function storeAndDisplay(event) {
-    event.preventDefault();
-    saveCurrentScore();  
-    renderCurrentScore();
-    conclusionCard.setAttribute("style", "display: none");
-    scoresCard.setAttribute("style", "display: block");
-    };
-
-var allScores = [];
-
-function saveCurrentScore() {
-    var userScore = {
-        Initials: inputInitials.value,
-        Score: inputScore.value,
-      };
-      localStorage.setItem("userScore", JSON.stringify(userScore));
-      allScores.push(userScore);
-      localStorage.setItem("allScores", JSON.stringify(allScores));
-};
-
-function renderAllScores() {
-    var allScores = JSON.parse(localStorage.getItem("allScores"));
-    // for score in allScores
-    // Add a new row to the scores card; appending a new child row to the table.  
-}
-function renderCurrentScore() {
-    var lastScore = JSON.parse(localStorage.getItem("userScore"));
-    if (lastScore !== null) {
-    document.getElementById("inputinitials").innerHTML = lastScore.Initials;
-    document.getElementById("inputScore").innerHTML = lastScore.Score;
-    renderAllScores();
-    } else {
-      return;
-    }
-}
-    
-
-
-// document.getElementById("saved-name").innerHTML = lastScore.Initials

@@ -1,3 +1,50 @@
+// Code that didn't work for the last two cards in the quiz.
+var seeScore = document.getElementById("#seeScore").addEventListener("click", displayScore());
+var inputInitials = document.querySelector("#inputinitials");
+var inputScore = document.querySelector("#inputScore");
+var submitScore = document.getElementById("saveResult").addEventListener("click", storeAndDisplay);
+
+function displayScore () {
+    conclusionCard.setAttribute("style", "display: none");
+    scoresCard.setAttribute("style", "display: block");
+}
+
+function storeAndDisplay(event) {
+    event.preventDefault();
+    saveCurrentScore();  
+    renderCurrentScore();
+
+    };
+
+var allScores = [];
+
+function saveCurrentScore() {
+    var userScore = {
+        Initials: inputInitials.value,
+        Score: inputScore.value,
+      };
+      localStorage.setItem("userScore", JSON.stringify(userScore));
+      allScores.push(userScore);
+      localStorage.setItem("allScores", JSON.stringify(allScores));
+};
+
+function renderAllScores() {
+    var allScores = JSON.parse(localStorage.getItem("allScores"));
+    // for score in allScores
+    // Add a new row to the scores card; appending a new child row to the table.  
+}
+function renderCurrentScore() {
+    var lastScore = JSON.parse(localStorage.getItem("userScore"));
+    if (lastScore !== null) {
+    document.getElementById("inputinitials").innerHTML = lastScore.Initials;
+    document.getElementById("inputScore").innerHTML = lastScore.Score;
+    renderAllScores();
+    } else {
+      return;
+    }
+}
+// document.getElementById("saved-name").innerHTML = lastScore.Initials
+
 // Second attempt with the project:
 // For cards:
 var introCard = document.querySelector(".intro-card");
