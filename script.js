@@ -117,25 +117,34 @@ var submitScore = document.getElementById("saveFinalResults").addEventListener("
 
 function storeAndDisplay(event) {
     event.preventDefault();
-    saveLastScore();  
-    renderLastScore();
+    saveCurrentScore();  
+    renderCurrentScore();
     conclusionCard.setAttribute("style", "display: none");
     scoresCard.setAttribute("style", "display: block");
     };
 
-function saveLastScore() {
+var allScores = [];
+
+function saveCurrentScore() {
     var userScore = {
         Initials: inputInitials.value,
         Score: inputScore.value,
       };
       localStorage.setItem("userScore", JSON.stringify(userScore));
+      allScores.push(userScore);
+      localStorage.setItem("allScores", JSON.stringify(allScores));
 };
 
-function renderLastScore() {
+function renderAllScores() {
+    var allScores = JSON.parse(localStorage.getItem("allScores"));
+    console.log(typeof allScores);
+}
+function renderCurrentScore() {
     var lastScore = JSON.parse(localStorage.getItem("userScore"));
     if (lastScore !== null) {
     document.getElementById("inputinitials").innerHTML = lastScore.Initials;
     document.getElementById("inputScore").innerHTML = lastScore.Score;
+    renderAllScores();
     } else {
       return;
     }
