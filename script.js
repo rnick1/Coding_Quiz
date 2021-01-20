@@ -137,7 +137,8 @@ function saveCurrentScore() {
 
 function renderAllScores() {
     var allScores = JSON.parse(localStorage.getItem("allScores"));
-    console.log(typeof allScores);
+    // for score in allScores
+    // Add a new row to the scores card; appending a new child row to the table.  
 }
 function renderCurrentScore() {
     var lastScore = JSON.parse(localStorage.getItem("userScore"));
@@ -149,4 +150,7 @@ function renderCurrentScore() {
       return;
     }
 }
-    // document.getElementById("saved-name").innerHTML = lastScore.Initials
+    
+
+
+// document.getElementById("saved-name").innerHTML = lastScore.Initials
