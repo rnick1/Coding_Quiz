@@ -1,6 +1,6 @@
 # Coding_Quiz
 
-# This repository is for my fourth homework assignment for the University of Washington Full-Stack Coding Bootcamp!
+## This repository is for my fourth homework assignment for the University of Washington Full-Stack Coding Bootcamp!
 
 ### The goal of this assignment is to utilize skills developed so far to create a coding quiz.
 
@@ -40,19 +40,20 @@ NOTE: I had two false starts for this project which ate up a lot of the time tha
 
 ## Here is the Intro page:
 
-![image](https://github.com/rnick1/Responsive_Portfolio/blob/main/Assets/Images/About-Home.png)
+![image](https://github.com/rnick1/Coding_Quiz/blob/main/assets/Intro.png)
 
 ## Here is a Question page:
 
-![image](https://github.com/rnick1/Responsive_Portfolio/blob/main/Assets/Images/Portfolio.png)
+![image](https://github.com/rnick1/Coding_Quiz/blob/main/assets/Randquestion.png)
 
 ## Here is the Conclusion page:
 
-![image](https://github.com/rnick1/Responsive_Portfolio/blob/main/Assets/Images/Contact.png)
+![image](https://github.com/rnick1/Coding_Quiz/blob/main/assets/Conc.png)
 
 ## Here is the Score page:
 
+![image](https://github.com/rnick1/Coding_Quiz/blob/main/assets/Score.png)
 
-## Overall, this was a very challenging assignment. In addition to learning to use Web API's, I learned through experience: 1. That there are multiple ways to get an app functioning as desired. 2. Thorough conceptualization and planning is essential before diving into code. 3. After conceptualizing the big picture, it is important to break the project into small, manageable, steps to avoid getting overwhelmed. 
+### Overall, this was a very challenging assignment. In addition to learning to use Web API's, I learned through experience: 1. That there are multiple ways to get an app functioning as desired. 2. Thorough conceptualization and planning is essential before diving into code. 3. After conceptualizing the big picture, it is important to break the project into small, manageable, steps to avoid getting overwhelmed. 
 
 ### Note: This application is live! The URL is: 
