@@ -49,6 +49,10 @@ function setupQuestion1() {
 function setupQuestion2() {
     result.textContent = '';
     quizQuestion.textContent = quizQuestion2
+    quizOptionA.removeEventListener('click', selectsCorrect);
+    quizOptionB.removeEventListener('click', selectsIncorrect);
+    quizOptionC.removeEventListener('click', selectsIncorrect);
+    quizOptionD.removeEventListener('click', selectsIncorrect);
     quizOptionA.addEventListener('click', selectsIncorrect);
     quizOptionB.addEventListener('click', selectsCorrect);
     quizOptionC.addEventListener('click', selectsIncorrect);
@@ -61,7 +65,11 @@ function setupQuestion2() {
 };
 
 function setupQuestion3() {
-    quizQuestion.textContent = quizQuestion3
+    quizQuestion.textContent = quizQuestion3;
+    quizOptionA.removeEventListener('click', selectsIncorrect);
+    quizOptionB.removeEventListener('click', selectsCorrect);
+    quizOptionC.removeEventListener('click', selectsIncorrect);
+    quizOptionD.removeEventListener('click', selectsIncorrect);
     quizOptionA.addEventListener('click', selectsIncorrect);
     quizOptionB.addEventListener('click', selectsIncorrect);
     quizOptionC.addEventListener('click', selectsCorrect);
@@ -70,7 +78,11 @@ function setupQuestion3() {
 };
 
 function setupQuestion4() {
-    quizQuestion.textContent = quizQuestion4
+    quizQuestion.textContent = quizQuestion4;
+    quizOptionA.removeEventListener('click', selectsIncorrect);
+    quizOptionB.removeEventListener('click', selectsIncorrect);
+    quizOptionC.removeEventListener('click', selectsCorrect);
+    quizOptionD.removeEventListener('click', selectsIncorrect);
     quizOptionA.addEventListener('click', selectsIncorrect);
     quizOptionB.addEventListener('click', selectsIncorrect);
     quizOptionC.addEventListener('click', selectsIncorrect);
@@ -78,7 +90,7 @@ function setupQuestion4() {
     nextQuestion.addEventListener('click', setupConclusion);
 };
 
-function selectsCorrect() {
+function selectsCorrect(event) {
     result.textContent = 'Correct!';
     count++;
     quizOptionA.disabled = true;
@@ -88,7 +100,7 @@ function selectsCorrect() {
     totalScore.textContent = count + ' out of four!';
 };
 
-function selectsIncorrect() {
+function selectsIncorrect(event) {
     result.textContent = 'Incorrect!';
     quizOptionA.disabled = true;
     quizOptionB.disabled = true;
@@ -142,5 +154,5 @@ localStorage.setItem('savedUserScores', JSON.stringify(savedUserScores));
         currentScore.textContent = scoreText + " " + scoreNumber;
         displayedResult.append(currentScore);
     
-    }
-}
+    };
+};
