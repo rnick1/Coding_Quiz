@@ -17,6 +17,8 @@ var quizQuestion2 = 'What do web developers use to set the style of a web page?'
 var quizQuestion3 = 'What do web developers use to set the functionality of a web page?';
 var quizQuestion4 = 'What do web developers use to manipulate a web page using the DOM structure?';
 
+var count = 0;
+
 // For timer:
 var secondsLeft = 75;
 
@@ -96,14 +98,20 @@ function setupQuestion4() {
 
 // Current work:
 var totalScore = document.querySelector('#score');
-var count = 0;
 var conclusionCard = document.querySelector('#conclusion-card');
 var scoresCard = document.querySelector('#scores-card');
 var userInitials = document.querySelector('#user-initials');
 var goToScore = document.getElementById('go-to-score');
 var displayedResult = document.querySelector("#displayed-result");
 var saveScore = document.getElementById('save-score'); 
+var savedUserScores = [];
+var localStorageContent = localStorage.getItem("savedUserScores");
+console.log(localStorageContent);
 
+if(localStorageContent !== null) {
+    savedUserScores = JSON.parse(localStorageContent);
+}
+console.log(savedUserScores);
 function setupConclusion() {
     questionCard.setAttribute('style', 'display: none');
     conclusionCard.setAttribute('style', 'display: block');
@@ -112,20 +120,30 @@ function setupConclusion() {
 };
 
 saveScore.addEventListener('click', function(event) {
-event.preventDefault();
-
     var userScore = {
         Initials: userInitials.value,
-        Score: count.value,
+        Score: count,
     };
-localStorage.setItem('userScore', JSON.stringify(userScore));
+    console.log(userScore);
+    savedUserScores.push(userScore);
+    event.preventDefault();
 
+localStorage.setItem('savedUserScores', JSON.stringify(savedUserScores));
 });
-
 
   function setupScores() {
     conclusionCard.setAttribute('style', 'display: none');
     scoresCard.setAttribute('style', 'display: block');
-    localStorage.getItem('userScore', parseInt(displayedResult));
-    var displayedResult = JSON.parse(localStorage.getItem("userScore"));
+    for (var i = 0; i < savedUserScores.length; i++) {
+        var scoreText = savedUserScores[i].Initials;
+        var scoreNumber = savedUserScores[i].Score;
+        console.log(savedUserScores[i].Initials);
+        var currentScore = document.createElement("li");
+        currentScore.textContent = scoreText + " " + scoreNumber;
+        displayedResult.append(currentScore);
+    
+    }
+    
+    // localStorage.getItem('userScore', parseInt(displayedResult));
+    // var displayedResult = JSON.parse(localStorage.getItem("userScore"));
 }
