@@ -94,6 +94,7 @@ function selectsIncorrect() {
     quizOptionB.disabled = true;
     quizOptionC.disabled = true;
     quizOptionD.disabled = true;
+    secondsLeft -=10;
 };
 
 var totalScore = document.querySelector('#score');
