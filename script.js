@@ -6,12 +6,10 @@ var quizQuestion = document.querySelector('#quiz-question');
 var quizOptions = document.querySelector('#quiz-options');
 var result = document.querySelector('#result');
 var nextQuestion = document.querySelector('#next');
-
-var quizOptionA = document.querySelector('#qOptionA')
-var quizOptionB = document.querySelector('#qOptionB')
-var quizOptionC = document.querySelector('#qOptionC')
-var quizOptionD = document.querySelector('#qOptionD')
-
+var quizOptionA = document.querySelector('#qOptionA');
+var quizOptionB = document.querySelector('#qOptionB');
+var quizOptionC = document.querySelector('#qOptionC');
+var quizOptionD = document.querySelector('#qOptionD');
 var quizQuestion1 = 'What do web developers use to structure a web page?';
 var quizQuestion2 = 'What do web developers use to set the style of a web page?';
 var quizQuestion3 = 'What do web developers use to set the functionality of a web page?';
@@ -30,7 +28,7 @@ function startQuiz() {
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
             alert('I am sorry, but you have run out of time. Better luck next time!');
-        }
+        };
     }, 1000);
     introCard.setAttribute('style', 'display: none');
     questionCard.setAttribute('style', 'display: block');
@@ -38,7 +36,7 @@ function startQuiz() {
 };
 
 function setupQuestion1() {
-    quizQuestion.textContent = quizQuestion1
+    quizQuestion.textContent = quizQuestion1;
     quizOptionA.addEventListener('click', selectsCorrect);
     quizOptionB.addEventListener('click', selectsIncorrect);
     quizOptionC.addEventListener('click', selectsIncorrect);
@@ -48,7 +46,7 @@ function setupQuestion1() {
 
 function setupQuestion2() {
     result.textContent = '';
-    quizQuestion.textContent = quizQuestion2
+    quizQuestion.textContent = quizQuestion2;
     quizOptionA.removeEventListener('click', selectsCorrect);
     quizOptionB.removeEventListener('click', selectsIncorrect);
     quizOptionC.removeEventListener('click', selectsIncorrect);
@@ -153,6 +151,5 @@ localStorage.setItem('savedUserScores', JSON.stringify(savedUserScores));
         var currentScore = document.createElement("li");
         currentScore.textContent = scoreText + " " + scoreNumber;
         displayedResult.append(currentScore);
-    
     };
 };
