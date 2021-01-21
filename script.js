@@ -46,24 +46,6 @@ function setupQuestion1() {
     nextQuestion.addEventListener('click', setupQuestion2);
 };
 
-function selectsCorrect() {
-    result.textContent = 'Correct!';
-    quizOptionA.disabled = true;
-    quizOptionB.disabled = true;
-    quizOptionC.disabled = true;
-    quizOptionD.disabled = true;
-    count++;
-    totalScore.textContent = count + ' out of four!';
-};
-
-function selectsIncorrect() {
-    result.textContent = 'Incorrect!';
-    quizOptionA.disabled = true;
-    quizOptionB.disabled = true;
-    quizOptionC.disabled = true;
-    quizOptionD.disabled = true;
-};
-
 function setupQuestion2() {
     result.textContent = '';
     quizQuestion.textContent = quizQuestion2
@@ -96,7 +78,24 @@ function setupQuestion4() {
     nextQuestion.addEventListener('click', setupConclusion);
 };
 
-// Current work:
+function selectsCorrect() {
+    result.textContent = 'Correct!';
+    count++;
+    quizOptionA.disabled = true;
+    quizOptionB.disabled = true;
+    quizOptionC.disabled = true;
+    quizOptionD.disabled = true;
+    totalScore.textContent = count + ' out of four!';
+};
+
+function selectsIncorrect() {
+    result.textContent = 'Incorrect!';
+    quizOptionA.disabled = true;
+    quizOptionB.disabled = true;
+    quizOptionC.disabled = true;
+    quizOptionD.disabled = true;
+};
+
 var totalScore = document.querySelector('#score');
 var conclusionCard = document.querySelector('#conclusion-card');
 var scoresCard = document.querySelector('#scores-card');
