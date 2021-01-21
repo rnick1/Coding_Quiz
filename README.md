@@ -56,4 +56,4 @@ NOTE: I had two false starts for this project which ate up a lot of the time tha
 
 ### Overall, this was a very challenging assignment. In addition to learning to use Web API's, I learned through experience: 1. That there are multiple ways to get an app functioning as desired. 2. Thorough conceptualization and planning is essential before diving into code. 3. After conceptualizing the big picture, it is important to break the project into small, manageable, steps to avoid getting overwhelmed. 
 
-### Note: This application is live! The URL is: 
+### Note: This application is live! The URL is: https://rnick1.github.io/Coding_Quiz/
