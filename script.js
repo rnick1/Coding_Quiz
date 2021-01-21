@@ -142,7 +142,4 @@ localStorage.setItem('savedUserScores', JSON.stringify(savedUserScores));
         displayedResult.append(currentScore);
     
     }
-    
-    // localStorage.getItem('userScore', parseInt(displayedResult));
-    // var displayedResult = JSON.parse(localStorage.getItem("userScore"));
 }

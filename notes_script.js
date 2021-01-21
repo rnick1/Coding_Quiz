@@ -1,3 +1,14 @@
+// LA help:
+var correctAnswer;
+
+quizOptionA.addEventListener('click', selectsCorrect);
+
+function setupQuestion1() {
+    quizQuestion.textContent = quizQuestion1
+    correctAnswer = "qOptionA"
+}
+
+
 // Code that didn't work for the last two cards in the quiz.
 var seeScore = document.getElementById("#seeScore").addEventListener("click", displayScore());
 var inputInitials = document.querySelector("#inputinitials");
